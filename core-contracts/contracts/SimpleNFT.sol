@@ -33,7 +33,7 @@ contract SimpleNFT is ABaseNFT {
         uint256 tokenId,
         uint256 batchSize
     ) internal override(ABaseNFT) {
-        require((from == address(0)) || (to == address(0)), "Token is not transferable");
+        require((from == address(0)) || (to == address(0)), "SimpleNFT: transfer not allowed");
         super._beforeTokenTransfer(from, to, tokenId, batchSize);
     }
 }
